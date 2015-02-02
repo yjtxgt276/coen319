@@ -1,0 +1,19 @@
+assume filesize less than GPU memory
+keySchedule tested (key padding unsolved) DONE
+byteSub tested (inv) DONE
+shiftRow tested (inv) DONE
+mixCol (inv) tested DONE
+addRoundKey (inv) tested DONE
+
+TODO:
+keySchedule: round constant DONE
+mixCol: matrix multiplication on GF(2^8)
+decryption
+
+ISSUES:
+bigfiles 800MB
+for file size 300MB, block#:
+    1 crashes
+    65535 profiled enc: 4.21s dec:4.41s 
+    32768 profiled enc: 4.21s dec:4.54s
+    16384 profiled enc: 4.37s dec:4.38s
